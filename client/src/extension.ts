@@ -45,9 +45,7 @@ export function activate(context: ExtensionContext) {
   );
 
   // Start the client. This will also launch the server
-  client.start().catch((err) => {
-    console.error("Failed to start language client:", err);
-  });
+  client.start()
 }
 
 export function deactivate(): Thenable<void> | undefined {
