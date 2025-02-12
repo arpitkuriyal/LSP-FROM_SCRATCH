@@ -1,7 +1,9 @@
 import { RequestMessage } from "../../server";
 import { documents, TextDocumentIdentifier } from "../../documents";
+import { Position } from "../../types";
 import * as fs from "fs";
 import log from "../../log";
+
 const words = fs.readFileSync("/usr/share/dict/words").toString().split("\n");
 type CompletionItem = {
   label: string;
@@ -10,10 +12,7 @@ interface CompletionList {
   isIncomplete: boolean;
   items: CompletionItem[];
 }
-interface Position {
-  line: number;
-  character: number;
-}
+
 interface TextDocumentPositionParams {
   textDocument: TextDocumentIdentifier;
   position: Position;
