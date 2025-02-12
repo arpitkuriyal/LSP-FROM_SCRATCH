@@ -13,7 +13,8 @@ export const initialize = (message: RequestMessage): InitializeResult => {
     diagnosticProvider:{
         interFileDependencies:false,
         workspaceDiagnostics:false
-     }},
+     },
+    codeActionProvider:true},
     serverInfo: {
       name: "lsp-from-scratch",
       version: "0.0.1",
